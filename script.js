@@ -14,7 +14,8 @@ moles.forEach((elem) => elem.addEventListener('click', () => {
 let shownPosition = getRandomInRange(0, 5);
 let hiddenPosition = getRandomInRange(0, 5);
 let level = 1;
-const tryl = () => {
+
+const changeMole = () => {
   moles[shownPosition].classList.add('playing-field__mole--active');
   moles[hiddenPosition].classList.remove('playing-field__mole--active');
   hiddenPosition = shownPosition;
@@ -22,12 +23,12 @@ const tryl = () => {
 };
 
 startButton.addEventListener('click', () => {
-  let interval = setInterval(tryl, 1000 / level);
+  let interval = setInterval(changeMole, 1000 / level);
 
   const newLevel = setInterval(() => {
     clearInterval(interval);
     level += 1;
-    interval = setInterval(tryl, 1000 / level);
+    interval = setInterval(changeMole, 1000 / level);
   }, 10000);
 
   setTimeout(() => {
