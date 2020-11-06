@@ -6,7 +6,7 @@
 body {
     margin: 0;
     font-family: Amatic SC, cursive;
-    background: linear-gradient(to bottom, #fdfcfb, #f5f0eb);
+    background: #f5f0eb;
     height: 100vh;
 }
 
@@ -24,6 +24,7 @@ main {
 }
 
 .start-button {
+    cursor: pointer;
     display: block;
     margin: 0 auto 50px;
     width: 200px;
@@ -51,11 +52,16 @@ main {
 .playing-field__mole {
     width: 60%;
     transform: translate(40px, 200px);
-    transition: 1s;
+    transition: .2s;
+    cursor: pointer;
+    user-select: none;
+}
+
+.playing-field__mole--active {
+    transform: translate(40px, 50px);
 }
 
 .playing-field__dirt {
     width: 100%;
     transform: translateY(-30px);
-    transition: 1s;
 }
