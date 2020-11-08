@@ -4,7 +4,7 @@ const moles = document.querySelectorAll('.playing-field__mole');
 
 const getRandomInRange = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
-moles.forEach((elem) => elem.addEventListener('click', () => {
+moles.forEach((elem) => elem.addEventListener('mousedown', () => {
   if (elem.classList.contains('playing-field__mole--active')) {
     counter.textContent = +counter.textContent + 1;
   }
@@ -34,6 +34,6 @@ startButton.addEventListener('click', () => {
   setTimeout(() => {
     clearInterval(interval);
     clearInterval(newLevel);
-    localStorage.setItem('result', counter.textContent);
+    sessionStorage.setItem('result', counter.textContent);
   }, 30000);
 });
