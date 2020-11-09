@@ -1,0 +1,67 @@
+@font-face {
+    font-family: Amatic SC;
+    src: url(assets/fonts/AmaticSC-Regular.ttf);
+}
+
+body {
+    margin: 0;
+    font-family: Amatic SC, cursive;
+    background: #f5f0eb;
+    height: 100vh;
+}
+
+main {
+    width: 800px;
+    margin: 0 auto;
+}
+
+.title {
+    text-align: center;
+    font-size: 100px;
+    padding-top: 50px;
+    margin: 0 auto 50px;
+    width: 100%;
+}
+
+.start-button {
+    cursor: pointer;
+    display: block;
+    margin: 0 auto 50px;
+    width: 200px;
+    height: 50px;
+    background: transparent;
+    border-radius: 0;
+    font-size: 30px;
+}
+
+.playing-field {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 90%;
+    min-height: 200px;
+    margin: 0 auto;
+}
+
+.playing-field__element {
+    width: 30%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.playing-field__mole {
+    width: 60%;
+    transform: translate(40px, 200px);
+    transition: .2s;
+    cursor: pointer;
+    user-select: none;
+}
+
+.playing-field__mole--active {
+    transform: translate(40px, 50px);
+}
+
+.playing-field__dirt {
+    width: 100%;
+    transform: translateY(-30px);
+}
